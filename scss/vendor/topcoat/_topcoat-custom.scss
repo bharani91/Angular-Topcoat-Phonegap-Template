@@ -1,0 +1,20 @@
+.topcoat-icon-font {
+    position: relative;
+    i {
+        position: absolute;
+        display: inline-block;
+        text-align: center;
+        width: 100%;
+        top: -11px;
+        left: 0;
+        font-size: 24px;
+    }    
+}
+
+.topcoat-icon-button {
+    &:focus, &:hover:focus {
+        border: 1px solid #0036ff;
+        box-shadow: inset 0 1px rgba(255, 255, 255, 0.36), 0 0 0 2px #6fb5f1;
+        outline: 0;
+    }
+}

@@ -1,0 +1,28 @@
+// Compass hacks apply to both ie6 & 7 -- set this to false to disable support for both.
+// remember to NOT add "!default" as compass will over-write it in its own mixins and function
+$legacy-support-for-ie              : false;
+$legacy-support-for-ie6             : $legacy-support-for-ie;
+$legacy-support-for-ie7             : $legacy-support-for-ie;
+$legacy-support-for-ie8             : $legacy-support-for-ie;
+$legacy-support-for-ie9             : true;
+
+// The user can simply set $legacy-support-for-ie and 6, 7, and 8 will be set accordingly,
+// But in case the user set each of those explicitly, we need to sync the value of
+// this combined variable.
+$legacy-support-for-ie              : $legacy-support-for-ie6 or $legacy-support-for-ie7 or $legacy-support-for-ie8;
+
+// legacy support
+$legacy-support-for-mozilla         : false;
+$legacy-support-for-webkit          : false;
+
+// experimental support
+$experimental-support-for-mozilla   : true;
+$experimental-support-for-webkit    : true;
+$experimental-support-for-opera     : false;
+$experimental-support-for-microsoft : false;
+$experimental-support-for-khtml     : false;
+$experimental-support-for-pie       : false;
+
+// Support for svg in experimental css3 properties.
+// Setting this to true might add significant size to your generated stylesheets.
+$experimental-support-for-svg       : false;

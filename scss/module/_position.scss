@@ -1,0 +1,91 @@
+// cross browser Inline-Block
+.iblock {
+    @include inline-block;
+}
+
+// alignments
+.align-left {
+    @include float(left);
+    margin-right: rhythm();
+    // output 1.5em
+}
+
+.align-right {
+    @include float(right);
+    margin-left: rhythm();
+    // output 1.5em
+}
+
+.align-center {
+    clear: both;
+    @include center-block;
+}
+
+.align-none {
+    display: block;
+}
+
+// Vertical alignment utilities
+// Depends on an appropriate `display` value.
+
+.align-top {
+    vertical-align: top;
+}
+
+.align-middle {
+    vertical-align: middle;
+}
+
+.align-baseline {
+    vertical-align: baseline;
+}
+
+.align-bottom {
+    vertical-align: bottom;
+}
+
+// floats
+.float-right {
+    @include float(right);
+}
+
+.float-left {
+    @include float(left);
+}
+
+.float-none {
+    @include reset-float;
+}
+
+// text alignment
+.text-left {
+    text-align: left;
+}
+
+.text-right {
+    text-align: right;
+}
+
+.text-center {
+    text-align: center;
+}
+
+.first {
+    margin-left: 0;
+    padding-left: 0;
+}
+
+.last {
+    margin-right: 0;
+    padding-right: 0;
+}
+
+.top {
+    margin-top: 0;
+    padding-top: 0;
+}
+
+.bottom {
+    margin-bottom: 0;
+    padding-bottom: 0;
+}

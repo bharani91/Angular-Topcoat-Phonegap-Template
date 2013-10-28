@@ -1,0 +1,24 @@
+// CLEARFIX
+// A new micro clearfix hack
+// http://nicolasgallagher.com/micro-clearfix-hack/
+// Known support: Firefox 3.5+, Safari 4+, Chrome, Opera 9+, IE 6+
+
+@mixin clearfix {
+  @if $legacy-support-for-ie6 or $legacy-support-for-ie7 {
+    *zoom: 1;
+  }
+
+  &:before,
+  &:after {
+    // The space content is one way to avoid an Opera bug when the contenteditable attribute is included anywhere else in the document.
+    // Otherwise it causes space to appear at the top and bottom of elements that are clearfixed.
+    content: " ";
+    // The use of `table` rather than `block` is only necessary if using
+    // `:before` to contain the top-margins of child elements.
+    display: table;
+  }
+
+  &:before {
+    clear: both;
+  }
+}

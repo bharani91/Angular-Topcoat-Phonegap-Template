@@ -1,0 +1,6 @@
+$namespace-button    : '.button' !default;
+$button-font-family  : $font-family-sans !default;
+$button-bg-color     : #eee !default;
+$button-text-color   : #666 !default;
+$button-border-color : darken($button-bg-color, 10%) !default;
+$button-height       : 32px !default;

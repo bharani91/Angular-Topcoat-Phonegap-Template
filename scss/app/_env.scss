@@ -1,0 +1,57 @@
+// ::selection {
+//   background: #333;
+//   color: #fff;
+//   text-shadow: none;
+// }
+
+// ::-moz-selection {
+//   background: #333;
+//   color: #fff;
+//   text-shadow: none;
+// }
+
+// ::-webkit-selection {
+//   background: #333;
+//   color: #fff;
+//   text-shadow: none;
+// }
+
+// container/wrapper
+
+body {
+    overflow: hidden;
+    @include center-block;
+    max-width: $env-width-max;
+    width: $env-width;
+}
+
+.content {
+    position: absolute;
+    background: $topcoat-dark;
+    z-index: 5;
+    left: 0;
+    top: 70px;
+    width: 100%;
+    height: 100%;
+    transition: left 0.2s ease-out;
+    -webkit-transition: left 0.2s ease-out;
+    transform: translate3d(0, 0, 0);
+    -webkit-transform: translate3d(0, 0, 0);
+    -moz-box-shadow: 0px 0px 8px 2px rgba(0, 0, 0, 0.57);
+    -webkit-box-shadow: 0px 0px 8px 2px rgba(0, 0, 0, 0.57);
+    box-shadow: 0px 0px 8px 2px rgba(0, 0, 0, 0.57);
+    overflow-x: hidden;
+    @include box-sizing();
+
+    .content-inner {
+        padding: 0 10px;
+        z-index: 100;
+        @include box-sizing();
+
+        h1, h2, h3, h4, h5, h6 {
+            color: $white;
+        }
+        
+        color: $text-quiet;
+    }
+}

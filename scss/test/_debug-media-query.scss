@@ -1,0 +1,33 @@
+@mixin debugmessage($message, $bg-color: #c0c0c0) {
+  &::before {
+    content: $message;
+    font-weight: bold;
+    display: block;
+    text-align: center;
+    background: $bg-color;
+    margin: 0;
+    padding: 0.5em;
+    position: absolute;
+    right: 0;
+    left: 0;
+    top: 0;
+    z-index: 999999999;
+  }
+}
+
+@if $debug-mq == true {
+
+  @media only screen and (max-width: 320px) {
+    body {
+      @include debugmessage("Mobile (320px) Media Query Fired!");
+    }
+  }
+
+  @media only screen and (min-width: 768px) and (max-width: 1024px) {
+    body {
+      @include debugmessage("Tablet (768px - 1024px) Media Query Fired!");
+    }
+  }
+
+}
+// end @if $debug-mq

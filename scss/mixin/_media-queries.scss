@@ -1,0 +1,19 @@
+// MEDIAQUERIES
+
+// USAGE
+// .class {
+//   width: 80%;
+//   @include respond-to(bp-large) {
+//     width: 100%;
+//   }
+// }
+
+@mixin respond-to($point) {
+  @each $breakpoint in $breakpoints {
+    $query: nth($breakpoint, 1);
+    $name: nth($breakpoint, 2);
+    @if ($name == $point) {
+      @media #{$query} { @content }
+    }
+  }
+}

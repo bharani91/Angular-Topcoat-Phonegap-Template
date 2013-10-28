@@ -1,0 +1,30 @@
+// USAGE
+// @include font-face(SourceSansPro, 'Source_Sans_Pro/SourceSansPro-Regular');
+// @include font-face(SourceSansPro, 'Source_Sans_Pro/SourceSansPro-Bold', bold);
+// @include font-face(SourceSansPro, 'Source_Sans_Pro/SourceSansPro-Italic', normal, italic);
+
+// // Rails asset-pipeline - place fonts in app/assets/fonts/
+// @include font-face(SourceSansPro, 'Source_Sans_Pro/SourceSansPro-Regular', normal, $asset-pipeline: true);
+// order of the includes matters, and it is: normal, bold, italic, bold+italic.
+
+@mixin font-face($font-family, $file-path: $path-fonts, $weight: normal, $style: normal, $asset-pipeline: false ) {
+  @font-face {
+    font-family: $font-family;
+    font-weight: $weight;
+    font-style: $style;
+
+    @if $asset-pipeline == true {
+      src: font-url('#{$path-fonts}/#{$file-path}.eot');
+      src: font-url('#{$path-fonts}/#{$file-path}.eot?#iefix')          format('embedded-opentype'),
+           font-url('#{$path-fonts}/#{$file-path}.woff')                format('woff'),
+           font-url('#{$path-fonts}/#{$file-path}.ttf')                 format('truetype'),
+           font-url('#{$path-fonts}/#{$file-path}.svg##{$font-family}') format('svg');
+    } @else {
+      src: url('#{$path-fonts}/#{$file-path}.eot');
+      src: url('#{$path-fonts}/#{$file-path}.eot?#iefix')               format('embedded-opentype'),
+           url('#{$path-fonts}/#{$file-path}.woff')                     format('woff'),
+           url('#{$path-fonts}/#{$file-path}.ttf')                      format('truetype'),
+           url('#{$path-fonts}/#{$file-path}.svg##{$font-family}')      format('svg');
+    }
+  }
+}

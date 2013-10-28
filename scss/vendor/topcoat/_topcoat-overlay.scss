@@ -1,0 +1,57 @@
+/* Overlay */
+
+.overlay {
+  padding: 0;
+  margin: 0;
+  user-select: none;
+  box-sizing: border-box;
+  background-clip: padding-box;
+  overflow: hidden;
+  cursor: default;
+  position: absolute;
+  z-index: 10;
+  border: none;
+}
+
+.topcoat-overlay {
+  padding: 0;
+  margin: 0;
+  user-select: none;
+  box-sizing: border-box;
+  background-clip: padding-box;
+  overflow: hidden;
+  cursor: default;
+  position: absolute;
+  z-index: 10;
+  border: none;
+  position: absolute;
+  width: 65%;
+  height: 50%;
+  margin: auto;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
+  border-radius: 6px;
+  background-color: #e5e9e8;
+  border: 1px solid #a5a8a8;
+  text-align: center;
+}
+
+.topcoat-overlay-bg {
+  position: fixed;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  background-color: rgba(88, 90, 92, 0.7);
+  box-shadow: inset 0px 0px 115px 0px #000;
+  z-index: 5;
+}
+
+.topcoat-overlay-buttons {
+  margin-top: 20px;
+  .topcoat-button, .topcoat-button--cta {
+    margin: 5px;
+  }
+}

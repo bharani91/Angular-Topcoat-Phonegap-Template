@@ -1,0 +1,101 @@
+$font-family-serif      : $georgia !default;
+$font-family-sans       : $helvetica !default;
+$font-family-monospace  : $consolas !default;
+$font-family-cursive    : $cursive !default;
+
+// set the initial em-base
+$em-base:             16px !default;
+
+// Typography powered by Typeplate
+// v1.1.1
+// typeplate.com
+
+
+// $Variable $BaseType
+//
+//the serif boolean var can be redeclared from another stylesheet. However
+//the var must be placed after your @import "typeplate.scss";
+$serif-boolean          : true !default;
+
+$font-family            : if($serif-boolean, $font-family-serif, $font-family-sans) !default;
+
+$font-weight            : normal !default;
+$line-height            : 1.65 !default;
+$font-size              : 112.5 !default; // percentage value (16 * 112.5% = 18px)
+$font-base              : 16 * ($font-size/100) !default; // converts our percentage to a pixel value
+$custom-font-family     : false !default; // Custom font-face stack, if set will be added to the $font-family
+$measure                : $font-base * $line-height;
+
+
+// $Variable $Small-Print
+$small-print-size       : 65% !default;
+
+
+// $Variable $Base-Color
+$body-copy-color        : $color-body-text !default;
+$heading-color          : #222 !default;
+
+
+// $Variable $Ampersand
+$amp-fontface-name      : $font-family-cursive !default;
+$amp-fontface-source    : local('Georgia'), local('Garamond'), local('Palatino'), local('Book Antiqua') !default;
+$amp-fontface-fallback  : local('Georgia') !default;
+
+// Allows for our ampersand element to have differing
+// font-family from the ampersand unicode font-family.
+$amp-font-family        : $font-family-sans !default;
+
+
+// $Variable $Icon-Font-Helper
+// ex.1) $icon-fonts    : (icon-name);
+// ex.2) $icon-fonts    : (icon-name1, icon-name2, icon-name3);
+$icon-fonts             : null !default;
+
+
+// $Variable $Typescale
+$tera                   : 117 !default; // 117 = 18 × 6.5
+$giga                   : 90 !default; // 90 = 18 × 5
+$mega                   : 72 !default; // 72 = 18 × 4
+$alpha                  : 60 !default; // 60 = 18 × 3.3333
+$beta                   : 48 !default; // 48 = 18 × 2.6667
+$gamma                  : 36 !default; // 36 = 18 × 2
+$delta                  : 24 !default; // 24 = 18 × 1.3333
+$epsilon                : 21 !default; // 21 = 18 × 1.1667
+$zeta                   : 18 !default; // 18 = 18 × 1
+
+
+// $Variable $Typescale-Unit
+$type-scale-unit-value  : rem !default;
+
+
+// $Variable $Text-Indentation
+$indent-val             : 1.5em !default;
+
+
+// $Variable $Pull-Quotes
+$pull-quote-fontsize    : 4em !default;
+$pull-quote-opacity     : 0.5 !default;
+$pull-quote-color       : #dc976e !default;
+
+
+// $Variable $Citation
+$cite-display           : block !default;
+$cite-text-align        : right !default;
+$cite-font-size         : inherit !default;
+
+
+// $Variable $Small-Caps
+$small-caps-color       : gray !default;
+$small-caps-weight      : 600 !default;
+
+
+// $Variable $DropCap
+$dropcap-float-position : left !default;
+$dropcap-font-size      : 4em !default;
+$dropcap-font-family    : inherit !default;
+$dropcap-txt-indent     : 0 !default;
+$dropcap-margin         : inherit !default;
+$dropcap-padding        : inherit !default;
+$dropcap-color          : inherit !default;
+$dropcap-line-height    : 1 !default;
+$dropcap-bg             : transparent !default;

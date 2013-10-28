@@ -1,0 +1,22 @@
+hr {
+  border-top: 1px solid $color-border;
+  border-bottom: 0;
+  border-right: 0;
+  border-left: 0;
+  clear: both;
+  height: 1px;
+  margin: rhythm() 0;
+  min-height: 0;
+  &.dotted {
+    border-style: dotted;
+  }
+  &.dashed {
+    border-style: dashed;
+  }
+  &.darkborder {
+    border-color: darken($color-border, 50%);
+  }
+  &.lightborder {
+    border-color: lighten($color-border, 50%);
+  }
+}

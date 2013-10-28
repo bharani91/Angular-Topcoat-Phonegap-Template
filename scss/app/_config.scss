@@ -1,0 +1,10 @@
+// COLOR
+// Set the brand color at the base config at "config/color"
+// As it can be used earlier before the theme/design styles to set default and other initial styles
+
+// UI
+$border-radius         : 2px !default;
+$border-radius-rounded : 50% !default;
+
+$env-width             : 100%;
+$env-width-max         : 800px !default;

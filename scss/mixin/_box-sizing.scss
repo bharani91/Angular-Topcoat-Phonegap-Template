@@ -1,0 +1,25 @@
+// BOX-SIZING
+//
+// Apply a natural box layout model to all elements
+// Supported in Chrome, IE8+, Opera, Safari 5.1+
+//
+// IE8 does not support box-sizing: border-box;
+// with min-width/max-width and min-height/max-height.
+//
+// For IE6/7 you can optionally use the box-sizing polyfill
+// https://github.com/Schepp/box-sizing-polyfill
+//
+// @include box-sizing(border-box);
+
+@mixin box-sizing($type: border-box) {
+  // firefox
+  @if $experimental-support-for-mozilla {
+    -moz-box-sizing: $type;
+  }
+
+  // old iOS<=4 and Android<=2.3
+  @if $experimental-support-for-webkit {
+    -webkit-box-sizing: $type;
+  }
+  box-sizing: $type;
+}

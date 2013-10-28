@@ -1,0 +1,18 @@
+@if $shame-mode == true {
+
+  /*
+   *
+   * A stylesheet dedicated to housing your nasty, hacky, quick-fix styles.
+   * It all started with a blog post from
+   * http://csswizardry.com/2013/04/shame-css/
+   *
+   * Try to document all hacks.
+   *
+   */
+
+.foo {
+  background: $white;
+  color: $black;
+}
+
+} // end @if $shame-mode

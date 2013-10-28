@@ -1,0 +1,119 @@
+#{$namespace-button} {
+  @include border-radius($border-radius);
+  @include inline-block(middle);
+  white-space: nowrap;
+  font-family: $font-family-sans;
+  font-size: 100%;
+  text-shadow: 0 1px 1px rgba(255, 255, 255, 1);
+  text-decoration: none;
+  text-align: center;
+  text-indent: 0;
+  line-height: 2;
+  cursor: pointer;
+  margin: 0;
+  padding: 0 1em;
+  border: 1px solid $button-border-color;
+  background: $button-bg-color;
+  color: $button-text-color;
+}
+
+#{$namespace-button} {
+  &:hover {
+    text-decoration: none;
+    border-color: darken($button-border-color, 20%);
+    background: darken($button-bg-color, 10%);
+    color: darken($button-text-color, 20%);
+  }
+  &:active,
+  &:focus {
+    outline: none;
+    background: desaturate($button-bg-color, 10%);
+    color: darken($button-text-color, 20%);
+  }
+}
+
+#{$namespace-button}--small {
+  padding-right: 0.5em;
+  padding-left: 0.5em;
+  line-height: 2;
+}
+
+#{$namespace-button}--large {
+  padding-right: 1.5em;
+  padding-left: 1.5em;
+  line-height: 4;
+}
+
+#{$namespace-button}--huge {
+  padding-right: 2em;
+  padding-left: 2em;
+  line-height: 5;
+}
+
+// These buttons will fill the entirety of their container
+#{$namespace-button}--full {
+  width: 100%;
+  padding-right: 0;
+  padding-left: 0;
+  text-align: center;
+}
+
+// sizes
+#{$namespace-button}--alpha {
+  font-size: 3rem;
+}
+
+#{$namespace-button}--beta {
+  font-size: 2rem;
+}
+
+#{$namespace-button}--gamma {
+  font-size: 1rem;
+}
+
+// Make the button inherit sizing from its parent.
+#{$namespace-button}--natural {
+  vertical-align: baseline;
+  font-size: inherit;
+  line-height: inherit;
+  padding-right: 0.5em;
+  padding-left: 0.5em;
+}
+
+#{$namespace-button}--primary {}
+
+#{$namespace-button}--secondary {}
+
+#{$namespace-button}--tertiary {}
+
+// Positive actions; e.g. sign in, purchase, submit, etc.
+#{$namespace-button}--positive {
+  background-color: #4a993e;
+  color: #fff;
+}
+
+// Negative actions; e.g. close account, delete photo, remove friend, etc.
+#{$namespace-button}--negative {
+  background-color: #b33630;
+  color: #fff;
+}
+
+// Inactive, disabled buttons.
+
+#{$namespace-button}--inactive,
+#{$namespace-button}--inactive:hover,
+#{$namespace-button}--inactive:active,
+#{$namespace-button}--inactive:focus {
+  background-color: #ddd;
+  color: #777;
+  cursor: text;
+}
+
+// styles
+#{$namespace-button}--soft {
+  border-radius: 200px;
+}
+
+#{$namespace-button}--hard {
+  border-radius: 0;
+}

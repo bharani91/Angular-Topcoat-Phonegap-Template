@@ -1,0 +1,24 @@
+*,
+*:after,
+*:before {
+  @include box-sizing(border-box);
+}
+
+html {
+  // prevent overflow on HTML element
+  overflow-y: scroll;
+}
+
+a {
+  color: $link-color;
+  text-decoration: none;
+  &:hover {
+    color: $link-color-hover;
+    text-decoration: underline;
+  }
+}
+
+// A hack for HTML5 contenteditable attribute on mobile
+textarea[contenteditable] {
+  -webkit-appearance: none;
+}

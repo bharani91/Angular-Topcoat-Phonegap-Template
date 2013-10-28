@@ -1,0 +1,22 @@
+img {
+  // fluid images
+  max-width: 100%;
+  // Remove the gap between images and the bottom of their containers
+  vertical-align: middle;
+  //set correct orientation from image EXIF
+  //http://dev.w3.org/csswg/css-images/#the-image-orientation
+  //Value:  from-image | <angle> | [ <angle>? flip ]
+  image-orientation: from-image;
+}
+
+// Non-fluid images if you specify `width` and/or `height` attributes
+img[width],
+img[height] {
+  max-width: none;
+}
+
+// circular image
+.img-circle,
+.img-round {
+  border-radius: $border-radius-rounded;
+}

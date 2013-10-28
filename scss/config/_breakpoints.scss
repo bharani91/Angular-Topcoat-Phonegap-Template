@@ -1,0 +1,10 @@
+$breakpoints: (
+  "(max-width: 319px)" "bp-micro",
+  "(max-width: 480px)" "bp-small",
+  "(min-width: 481px)" "bp-not-small",
+  "(max-width: 767px)" "bp-small-not-medium",
+  "(min-width: 768px) and (max-width: 1024px)" "bp-medium",
+  "(min-width: 1025px)" "bp-large",
+  "(min-width: 1400px)" "bp-large-x",
+  "(-webkit-min-device-pixel-ratio: 1.5)" "retina"
+);

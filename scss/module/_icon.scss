@@ -1,0 +1,24 @@
+$icons-li-width: (30em/14);
+
+// makes sure icons active on rollover in links
+a {
+  [class^="icon-"],
+  [class*=" icon-"] {
+    display: inline;
+  }
+}
+
+.icons-ul {
+  margin-left: $icons-li-width;
+  list-style-type: none;
+
+  > li { position: relative; }
+
+  .icon-li {
+    position: absolute;
+    left: -$icons-li-width;
+    width: $icons-li-width;
+    text-align: center;
+    line-height: inherit;
+  }
+}
