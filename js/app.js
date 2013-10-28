@@ -21,7 +21,7 @@ angular.module('App', [
 })
 
 .config(['$routeProvider', function($routeProvider) {
-    $routeProvider.when('/', {templateUrl: 'partials/home.html', controller: 'HomeController'});
+    $routeProvider.when('/', {templateUrl: 'partials/home.html', controller: 'HomeController', reverse: true});
     $routeProvider.when('/about', {templateUrl: 'partials/about.html' });
 }]);
 

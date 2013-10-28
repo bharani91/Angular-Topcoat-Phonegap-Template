@@ -11,6 +11,7 @@
 </head>
 
 <body ng-controller="AppController" class="dark" ng-class="{ 'left-nav' : showSideMenu }">
+    <!-- Top Bar -->
     <div class="topcoat-navigation-bar">
         <div class="topcoat-navigation-bar__item left quarter">
             <button id="slide-menu-button" class="topcoat-icon-button" ng-click="toggleSideMenu()">
@@ -23,7 +24,7 @@
 
 
         <div class="topcoat-navigation-bar__item right quarter" ng-hide="isActive('/about')">
-            <button class="topcoat-icon-button" ng-click="slidePage('/about', 'modal')">
+            <button class="topcoat-icon-button" ng-click="slidePage('/about')">
                 <span class="topcoat-icon topcoat-icon-font"><i class="icon-gears"></i></span>
             </button>
         </div>
@@ -36,13 +37,12 @@
     </div>
 
 
-
-
+    <!-- Side Nav Links -->
     <div class="side-nav">
         <nav class="site">
             <ul class="topcoat-list side-nav__list">
                 <li class="topcoat-list__item side-nav__list__item ">
-                    <a href="" class="side-nav__button" ng-click="slidePage('/about', 'modal')">
+                    <a href="" class="side-nav__button" ng-click="slidePage('/about')">
                         <p><i class="icon-edit"></i> Edit</p>
                     </a>
                 </li>
@@ -70,8 +70,6 @@
             </ul>
         </nav>
     </div>
-
-
 
 
     <!-- Angular Mobile Nav requires mobile-view inplace of ng-view -->
