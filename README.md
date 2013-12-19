@@ -10,7 +10,7 @@ Boilerplate for building hybrid mobile applications
 
 
 ### CSS
-* [Anduril](http://gitbub.com/brajeshwar/anduril) Anduril is for the designers/developers who do not want frameworks to do their design.
+* [Anduril](http://github.com/brajeshwar/anduril) Anduril is for the designers/developers who do not want frameworks to do their design.
 * [Topcoat](http://topcoat.io) CSS for clean and fast web apps 
 * [FontAwesome](https://github.com/FortAwesome/Font-Awesome) The iconic font designed for Bootstrap.
 
